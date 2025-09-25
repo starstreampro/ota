@@ -143,8 +143,8 @@ if [ -n "$CURRENT_VERSION" ]; then
     echo "$CURRENT_VERSION" > "$VERSION_FILE"
     echo -e "${GREEN}✓ Version file created: $VERSION_FILE (version: $CURRENT_VERSION)${NC}"
 else
-    echo "2.1.69" > "$VERSION_FILE"
-    echo -e "${YELLOW}⚠ Using default version 2.1.69 in: $VERSION_FILE${NC}"
+    echo "2.2.69" > "$VERSION_FILE"
+    echo -e "${YELLOW}⚠ Using default version 2.2.69 in: $VERSION_FILE${NC}"
 fi
 
 # Generate MD5 checksum
