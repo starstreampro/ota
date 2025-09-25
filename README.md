@@ -1,28 +1,41 @@
-# StreamBox Pro OTA Firmware Repository
+# Arduino Giga R1 WiFi - OTA Firmware Repository
 
-This repository contains Over-The-Air (OTA) firmware update files for the StreamBox Pro device.
+**FIRMWARE ONLY REPOSITORY** - Contains only compiled firmware binaries for OTA updates.
 
-## Files
+## 📁 Repository Contents
 
-### `/firmware/` directory:
-- `ssp-streamboxpro-v2.ota` - Main firmware binary file
-- `ssp-streamboxpro-v2.md5` - MD5 checksum for verification
-- `ssp-streamboxpro-v2.version` - Version information
+```
+firmware/
+├── ssp-streamboxpro-v2.ota      # Compressed firmware binary (88KB)
+├── ssp-streamboxpro-v2.version  # Version identifier
+└── ssp-streamboxpro-v2.md5      # Integrity checksum
+```
 
-## Raw File URLs
+## 🔄 OTA Update Process
 
-The device fetches firmware updates from these GitHub raw URLs:
+Arduino devices automatically check this repository via GitHub Releases API:
 
-- **Firmware**: `https://raw.githubusercontent.com/starstreampro/ota/main/firmware/ssp-streamboxpro-v2.ota`
-- **Checksum**: `https://raw.githubusercontent.com/starstreampro/ota/main/firmware/ssp-streamboxpro-v2.md5`
-- **Version**: `https://raw.githubusercontent.com/starstreampro/ota/main/firmware/ssp-streamboxpro-v2.version`
+1. Query: `https://api.github.com/repos/starstreampro/ota/releases/latest`
+2. Download firmware from release assets
+3. Verify integrity using MD5 checksum
+4. Install and activate new firmware
 
-## Current Version
+## 📋 Current Release
 
 - **Version**: 2.2.69
-- **Size**: 968,244 bytes
-- **Build**: Optimized for Arduino Giga R1 WiFi
+- **Size**: 88KB (LZSS compressed)
+- **Target**: Arduino Giga R1 WiFi
 
-## Deployment
+## ⚠️ Repository Policy
 
-Files are automatically served via GitHub's raw file CDN for reliable OTA updates.
+**This repository contains ONLY firmware files for OTA distribution.**
+
+- ❌ No source code
+- ❌ No development tools
+- ❌ No documentation
+- ❌ No build scripts
+- ✅ Only compiled firmware binaries
+
+---
+
+**Secure OTA Firmware Distribution for Arduino Giga R1 WiFi**
